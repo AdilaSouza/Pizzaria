@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextPersonPhone"
+        android:layout_width="244dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPhonetic"
+        android:text="Telefone"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="242dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nome"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPersonAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonPhone" />
+
+
+    <EditText
+        android:id="@+id/editTextPersonAddress"
+        android:layout_width="248dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="Endereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSize"
+        android:layout_width="225dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupPizzaSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonAddress">
+
+        <RadioButton
+            android:id="@+id/radio_p"
+            android:layout_width="183dp"
+            android:layout_height="28dp"
+            android:checked="true"
+            android:text="Pequeno (R$ 20,00)" />
+
+        <RadioButton
+            android:id="@+id/radio_m"
+            android:layout_width="180dp"
+            android:layout_height="27dp"
+            android:text="Média (R$ 30,00)" />
+
+        <RadioButton
+            android:id="@+id/radio_g"
+            android:layout_width="184dp"
+            android:layout_height="28dp"
+            android:text="Grande (R$ 40,00)" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPizzaSelector"
+        android:layout_width="269dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSize">
+
+        <RadioButton
+            android:id="@+id/pizza_1"
+            android:layout_width="172dp"
+            android:layout_height="36dp"
+            android:checked="true"
+            android:text="Marquerita (R$ 20,00)" />
+
+        <RadioButton
+            android:id="@+id/pizza_5"
+            android:layout_width="181dp"
+            android:layout_height="31dp"
+            android:text="Frango (R$ 30,00)" />
+
+        <RadioButton
+            android:id="@+id/pizza_4"
+            android:layout_width="188dp"
+            android:layout_height="30dp"
+            android:text="Calabreza (R$ 40,00)" />
+
+        <RadioButton
+            android:id="@+id/pizza_3"
+            android:layout_width="187dp"
+            android:layout_height="28dp"
+            android:text="Queijo (R$ 30,00)" />
+
+        <RadioButton
+            android:id="@+id/pizza_2"
+            android:layout_width="193dp"
+            android:layout_height="35dp"
+            android:text="Portuguesa (R$ 40,00)" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular pedido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        app:layout_constraintVertical_bias="0.32"></Button>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="312dp"
+        android:layout_height="96dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupPizzaSelector"></TextView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
